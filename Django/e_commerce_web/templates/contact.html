@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<style>
+    /* Add CSS styles for the map container and its parent container */
+    .contact-area {
+        display: flex;
+        align-items: center;
+    }
+
+    .google-map {
+        width: 50%; /* Adjust the width as needed */
+        height: 685px; /* Set the map's height */
+    }
+
+    .contact-info {
+        width: 50%; /* Adjust the width as needed */
+        padding: 30px; /* Add padding as desired */
+    }
+
+    /* Add any additional CSS styling here */
+</style>
+
+<div class="contact-area">
+    <div class="google-map">
+        <div id="googleMap"></div>
+    </div>
+
+    <div class="contact-info">
+        <h2>How to Find Us</h2>
+        <p></p>
+
+        <div class="contact-address mt-50">
+            <p><span>address:</span> Mirpur-6, Dhaka</p>
+            <p><span>Phone:</span>+8801798533533</p>
+            <p><a href="#">fahadshuvo33@gmail.com<b></a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Include the Google Maps JavaScript API with your API key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+<!-- JavaScript to initialize the map -->
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById('googleMap'), {
+            center: { lat: 23.80, lng: 90.36 }, // Set initial map center
+            zoom: 12, // Set initial zoom level
+            // Additional options can be added here
+        });
+    }
+</script>
+
+{% endblock content %}

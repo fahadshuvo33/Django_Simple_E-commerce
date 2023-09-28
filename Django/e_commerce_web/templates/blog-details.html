@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+    <!-- ##### Blog Wrapper Area Start ##### -->
+    <div class="single-blog-wrapper">
+
+        <!-- Single Blog Post Thumb -->
+        <div class="single-blog-post-thumb">
+            <img src="{{blog.image.url}}" alt="Image">
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="regular-page-content-wrapper section-padding-80">
+                        <div class="regular-page-text">
+                            <h2>{{blog.blog_title}}</h2>
+                            <p>{{blog.blog_description | safe }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Blog Wrapper Area End ##### -->
+    
+{% endblock content %}

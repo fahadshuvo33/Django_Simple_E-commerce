@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb_area breadcumb-style-two bg-img" style="background-image: url({% static '/img/bg-img/breadcumb2.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2>Fashion Blog</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Blog Wrapper Area Start ##### -->
+    <div class="blog-wrapper section-padding-80">
+        <div class="container">
+            <div class="row">
+                {% for blog in Blogs %}
+                <!-- Single Blog Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-area mb-50">
+                        <img src="{{ blog.image.url }}" alt="">
+                        <!-- Post Title -->
+                        <div class="post-title">
+                            <a href="{% url 'blog_details' blog.slug %}">{{ blog.blog_title }}</a>
+                        </div>
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <!-- Post Title -->
+                            <div class="hover-post-title">
+                                <a href="{% url 'blog_details' blog.slug %}">{{ blog.blog_title }}</a>
+                            </div>
+                            <p>{{ blog.blog_description | safe | truncatechars_html:220}}</p>
+                            <a href="{% url 'blog_details' blog.slug %}">Continue reading <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- ##### Blog Wrapper Area End ##### -->
+
+{% endblock content %}
