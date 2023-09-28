@@ -29,7 +29,7 @@ I created this project after i learn django. There is a lot of things i didnot d
 
 ## Templates Source
 
-I couldn't understand web design then, so i had to download open source templates for my Project. Here are the templates source.
+I couldn't understand web design then, so i had to download open source templates for my Project. Here are the templates source.<br>
 [Login Templates](https://colorlib.com/wp/template/login-form-17/)<br>
 [Registaration Templates](https://colorlib.com/wp/template/signup-form-15/)<br>
 [Website Templates](https://github.com/ravi2krishna/ecomm)<br>
@@ -88,14 +88,11 @@ cd Django_Simple_E-commerce-main/Django
 cd e_commerce_web/
 ```
 
-
 5. Run the project:
 
 ```
 python manage.py runserver
 ```
-
-
 This will start the development server, and you can access the project in your web browser at [http://localhost:8000/](http://localhost:8000/).
 
 ---
